@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Overpass+Mono&family=Teko&family=Stalinist+One&display=swap');
+@import "~normalize.css";
+@import "~bootstrap/scss/bootstrap";
+@import "header";
+@import "photo";
+@import "prices";
+@import "mobile";
+@import "interfaces";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+

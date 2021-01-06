@@ -1,0 +1,11 @@
+@import "variables";
+@import "mixins";
+
+.main-photo {
+  width: 100%;
+  min-height: 575px;
+  margin-top: -70px;
+  &__styles {
+    width: 100%;
+  }
+}

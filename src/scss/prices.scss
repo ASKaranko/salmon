@@ -1,0 +1,64 @@
+@import "variables";
+@import "mixins";
+
+.prices {
+  margin-top: 20px;
+  width: 100%;
+  &-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 96px;
+  }
+  &__title {
+    font-family: 'Stalinist One';
+    padding-top: 50px;
+    font-size: 96px;
+    line-height: 96px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__subtitle {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 24px;
+    margin: -62px auto 0 auto;
+    text-align: center;
+    color: $primary-color;
+  }
+  .service-header {
+    margin-top: 84px;
+    margin-bottom: 115px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    &__tab img, &__tab span {
+      display: block;
+      margin: 0 auto;
+    }
+    &__tab img {
+      height: 40px;
+      width: 40px;
+    }
+    &__tab span {
+      color: #1A1A1A;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      margin-top: 18px;
+    }
+    &__tab {
+      cursor: pointer;
+    }
+    &__tab.active {
+      @include btn-frame(133px, 167px);
+      padding-top: 27px;
+    }
+  }
+  .product-item {
+    @include product-item;
+  }
+}
+
