@@ -10,24 +10,12 @@
     padding-bottom: 96px;
   }
   &__title {
-    font-family: 'Stalinist One';
-    padding-top: 50px;
-    font-size: 96px;
-    line-height: 96px;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    margin: 0 auto;
+    @include title;
   }
   &__subtitle {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 24px;
-    margin: -62px auto 0 auto;
-    text-align: center;
-    color: $primary-color;
+    @include subtitle;
   }
-  .service-header {
+  .service-header, .service-header__category {
     margin-top: 84px;
     margin-bottom: 115px;
     display: flex;
@@ -57,8 +45,91 @@
       padding-top: 27px;
     }
   }
+  .service-header__category {
+    margin-top: 0;
+  }
   .product-item {
     @include product-item;
+  }
+  &-pagination {
+    margin: 81px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__tab {
+      height: 60px;
+      width: 60px;
+      border: 5px solid #F6F5F1;
+      background-color: #fff;
+      color: $text-color;
+      font-weight: 400;
+      font-size: 18px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-right: 40px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &.active {
+        border: 5px solid $text-color;
+        background-color: $text-color;
+        color: #fff;
+      }
+    }
+  }
+}
+.prices-category {
+  padding-top: 84px;
+}
+@media all and (max-width: 1199px) {
+  .prices {
+    .service-header {
+      justify-content: center;
+    }
+    .service-header__tab {
+
+    }
+  }
+}
+@media all and (max-width: 991px) {
+  .prices {
+    .service-header {
+      justify-content: center;
+    }
+    .service-header__tab {
+
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .prices {
+    &__title {
+      padding-top: 20px;
+      font-size: 70px;
+      line-height: 70px
+    }
+    &__subtitle {
+      font-size: 23px;
+      line-height: 24px;
+      margin: -47px auto 0 auto;
+    }
+  }
+}
+@media all and (max-width: 575px) {
+  .prices {
+    &__title {
+      padding-top: 20px;
+      font-size: 40px;
+      line-height: 40px
+    }
+    &__subtitle {
+      font-size: 20px;
+      line-height: 20px;
+      margin: -33px auto 0 auto;
+    }
   }
 }
 

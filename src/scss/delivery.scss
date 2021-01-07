@@ -1,0 +1,118 @@
+@import "variables";
+@import "mixins";
+
+.delivery {
+  margin-top: 70px;
+  &__title {
+    @include title;
+    color: #F7F6F3;
+  ;
+  }
+  &__subtitle {
+    @include subtitle;
+  }
+  &-conditions {
+    margin-top: 70px;
+    margin-bottom: 159px;
+  }
+  .delivery-item {
+    margin-right: 40px;
+    margin-bottom: 20px;
+    padding: 44px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 20px solid #F7F6F3;
+    &__image {
+      width: 82px;
+      height: 82px;
+      & img {
+        width: 100%;
+      }
+    }
+    &__schedule {
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 24px;
+      letter-spacing: 0.6px;
+      margin-top: 37px;
+      &-hours {
+        margin-top: 11px;
+        width: 100%;
+        text-align: right;
+        color: $small-text-color;
+        font-size: 14px;
+        line-height: 26px;
+        & span:nth-of-type(1) {
+          padding-right: 20px;
+        }
+      }
+      &-text {
+        margin-top: 11px;
+        width: 100%;
+        text-align: center;
+        color: $small-text-color;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+    &__more {
+      margin-top: 11px;
+      text-align: center;
+      color: $small-text-color;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}
+@media all and (max-width: 1399px) {
+  .delivery {
+    .delivery-item {
+      margin-right: 20px;
+      padding: 10px 10px 10px 10px;
+    }
+  }
+}
+@media all and (max-width: 991px) {
+  .delivery {
+    &__title {
+      padding-top: 20px;
+      font-size: 70px;
+      line-height: 70px
+    }
+    &__subtitle {
+      font-size: 23px;
+      line-height: 24px;
+      margin: -47px auto 0 auto;
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .delivery {
+    &__title {
+      padding-top: 20px;
+      font-size: 50px;
+      line-height: 50px
+    }
+    &__subtitle {
+      font-size: 23px;
+      line-height: 24px;
+      margin: -40px auto 0 auto;
+    }
+  }
+}
+@media all and (max-width: 575px) {
+  .delivery {
+    &__title {
+      padding-top: 20px;
+      font-size: 40px;
+      line-height: 40px
+    }
+    &__subtitle {
+      font-size: 20px;
+      line-height: 20px;
+      margin: -33px auto 0 auto;
+    }
+  }
+}

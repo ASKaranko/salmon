@@ -160,8 +160,91 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+
+@mixin title() {
+  font-family: 'Stalinist One';
+  padding-top: 50px;
+  font-size: 96px;
+  line-height: 96px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@mixin subtitle() {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 24px;
+  margin: -62px auto 0 auto;
+  text-align: center;
+  color: $primary-color;
+}
+
+@mixin link-more() {
+  display: block;
+  text-decoration: none;
+  color: $primary-color;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@mixin tray() {
+  @include btn-frame(133px, 58px);
+  font-family: "Teko";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin photo-menu() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  z-index: 10;
+  &__title {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 35px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
+    & a, & span {
+      font-size: 14px;
+      line-height: 19px;
+      font-family: 'Overpass Mono';
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    & span {
+      width: 11px;
+      display: block;
+      margin: 0 11px;
     }
   }
 }

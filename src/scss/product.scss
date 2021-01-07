@@ -1,0 +1,89 @@
+@import "variables";
+@import "mixins";
+
+.product {
+  margin-top: 105px;
+  &__image {
+    width: 100%;
+    & img {
+      max-width: 100%;
+    }
+  }
+  &__information {
+    padding-left: 35px;
+    padding-bottom: 14px;
+  }
+  &__input {
+    width: 105px;
+    height: 60px;
+    border: 5px solid #F6F5F1;
+    padding: 19px 32px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #000;
+    margin-right: 10px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 24px;
+    letter-spacing: 0.6px;
+    color: $text-color;
+    text-transform: uppercase;
+  }
+  &__weight, &__description {
+    margin-top: 19px;
+    font-size: 14px;
+    line-height: 26px;
+    color: $small-text-color;
+  }
+  &__price {
+    margin-top: 159px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 26px;
+    color: $primary-color;
+  }
+  &__order {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 38px;
+  }
+  &__tray {
+    @include tray;
+    color: #fff;
+    background-color: $primary-color;
+    @include btn-frame(165px, 60px);
+    width: 165px;
+    height: 60px;
+  }
+  &__recommendations {
+    margin-top: 90px;
+    margin-bottom: 70px;
+  }
+}
+
+@media all and (max-width: 1199px) {
+  .product {
+    &__price {
+      margin-top: 50px;
+    }
+  }
+}
+@media all and (max-width: 991px) {
+  .product {
+    &__price {
+      margin-top: 20px;
+    }
+  }
+}
+@media all and (max-width: 757px) {
+  .product {
+    &__title {
+      font-size: 25px;
+    }
+  }
+}

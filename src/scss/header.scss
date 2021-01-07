@@ -32,3 +32,39 @@
     padding-bottom: 30px;
   }
 }
+
+@media all and (max-width: 767px) {
+  .subheader {
+    &__logo {
+      width: 90px;
+      height: 90px;
+      margin-top: 0;
+      border: 2px solid $primary-color;
+      & img {
+        max-width: 90px;
+      }
+    }
+    &__contacts {
+      &-item {
+        &:nth-of-type(1) {
+          margin-left: 0;
+          margin-right: 17px;
+        }
+      }
+      &-phonenumber {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+@media all and (max-width: 1370px) {
+  .subheader {
+    &__contacts {
+      &-phonenumber {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}

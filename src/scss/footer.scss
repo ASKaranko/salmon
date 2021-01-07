@@ -1,0 +1,70 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+  margin-top: 20px;
+  &-wrapper {
+    width: 100%;
+    background-color: $text-color;
+    padding: 89px 0;
+  }
+  &-socials {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & span {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 34px;
+      color: #fff;
+      display: block;
+      margin-right: 30px;
+    }
+    &__icon {
+      @include social-icon;
+      &:nth-of-type(1) {
+        margin-right: 16px;
+      }
+    }
+  }
+  .menu__nav {
+    margin: 54px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-link {
+      font-family: "Teko";
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 1.5px;
+      color: #fff;
+      display: block;
+      margin-right: 24px;
+      text-decoration: none;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  &-copyright {
+    margin: 40px auto 0 auto;
+    font-family: "Overpass Mono";
+    line-height: 26px;
+    text-align: center;
+    & span:nth-of-type(1) {
+      font-size: 14px;
+      color: #fff;
+    }
+    & span:nth-of-type(2) {
+      font-size: 15px;
+      color: #A6A6A6;
+    }
+  }
+}
+@media all and (max-width: 575px) {
+  .menu__nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

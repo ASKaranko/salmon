@@ -73,6 +73,30 @@ module.exports = {
 				collapseWhitespace: isProd,
 			},
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'category.html',
+			template: 'category.html',
+			minify: {
+				removeComments: isProd,
+				collapseWhitespace: isProd,
+			},
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'product.html',
+			template: 'product.html',
+			minify: {
+				removeComments: isProd,
+				collapseWhitespace: isProd,
+			},
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'news.html',
+			template: 'news.html',
+			minify: {
+				removeComments: isProd,
+				collapseWhitespace: isProd,
+			},
+		}),
 		new CopyPlugin({
 			patterns: [
 				{from: path.resolve(__dirname, 'src/favicon.ico'),
@@ -90,7 +114,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.s[ac]ss$/i,
+				test: /\.s[ac]ss/i,
 				use: [
 					MiniCssExtractPlugin.loader,
 					'css-loader',
@@ -110,18 +134,14 @@ module.exports = {
 				],
 			},
 			{
+				test: /\.css$/i,
+				use: ['style-loader', 'css-loader'],
+			},
+			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: jsLoaders(),
 			},
-			{
-				test: /\.(png|jpe?g|gif)$/i,
-				use: [
-					{
-						loader: 'file-loader',
-					},
-				],
-			}
 		],
 	},
 };

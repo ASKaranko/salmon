@@ -3,9 +3,15 @@
 
 .mobile-app {
   margin-top: 65px;
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
   &__photo {
-    max-width: 674px;
-    max-height: 684px;
+    //max-width: 674px;
+    //max-height: 684px;
+    width: 100%;
+    height: 100%;
     & img {
       width: 100%;
     }
@@ -14,7 +20,10 @@
     padding-left: 72px;
     padding-top: 122px;
     background-color: $primary-color;
-    height: 684px;
+    //max-width: 674px;
+    //max-height: 684px;
+    width: 100%;
+    height: 100%;
     &-text span:nth-of-type(1) {
       font-weight: 600;
       font-size: 64px;
@@ -47,6 +56,49 @@
       line-height: 22px;
       font-weight: 600;
       letter-spacing: 1.5px;
+    }
+  }
+}
+@media all and (max-width: 1199px) {
+  .mobile-app {
+    &__description {
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .mobile-app {
+    &__description {
+      padding-left: 20px;
+      padding-top: 20px;
+      &-text span:nth-of-type(1) {
+        font-size: 5vw;
+        line-height: 5vw;
+      }
+      &-text span:nth-of-type(2) {
+        font-size: 5vw;
+        line-height: 5vw;
+      }
+      &-text span {
+        font-size: 4vw;
+        line-height: 4vw;
+      }
+      &-button {
+        width: 240px;
+        height: 81px;
+        border: 5px solid #fff;
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text-color;
+        font-size: 24px;
+        line-height: 22px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+      }
     }
   }
 }
