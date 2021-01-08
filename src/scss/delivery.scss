@@ -16,9 +16,8 @@
     margin-bottom: 159px;
   }
   .delivery-item {
-    margin-right: 40px;
-    margin-bottom: 20px;
-    padding: 44px 40px 40px 40px;
+    height: 100%;
+    padding: 35px 35px 35px 35px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -70,7 +69,6 @@
 @media all and (max-width: 1399px) {
   .delivery {
     .delivery-item {
-      margin-right: 20px;
       padding: 10px 10px 10px 10px;
     }
   }
@@ -94,8 +92,6 @@
   .delivery {
     &__title {
       padding-top: 20px;
-      font-size: 70px;
-      line-height: 70px
     }
     &__subtitle {
       font-size: 23px;
@@ -108,8 +104,6 @@
   .delivery {
     &__title {
       padding-top: 20px;
-      font-size: 50px;
-      line-height: 50px
     }
     &__subtitle {
       font-size: 23px;
@@ -122,13 +116,18 @@
   .delivery {
     &__title {
       padding-top: 20px;
-      font-size: 40px;
-      line-height: 40px
     }
     &__subtitle {
       font-size: 20px;
       line-height: 20px;
-      margin: -33px auto 0 auto;
+      margin: -29px auto 0 auto;
+    }
+  }
+  .delivery-item {
+    &__schedule {
+      &-hours {
+        text-align: center !important;
+      }
     }
   }
 }

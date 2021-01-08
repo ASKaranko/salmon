@@ -20,7 +20,7 @@
     margin-bottom: 115px;
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: flex-start;
     &__tab img, &__tab span {
       display: block;
       margin: 0 auto;
@@ -39,10 +39,12 @@
     }
     &__tab {
       cursor: pointer;
+      width: 133px;
+      padding: 30px 10px 10px 10px;
+      margin: 0 auto;
     }
     &__tab.active {
       @include btn-frame(133px, 167px);
-      padding-top: 27px;
       display: block;
       margin: 0 auto;
     }
@@ -85,6 +87,9 @@
 }
 .prices-category {
   padding-top: 84px;
+  & .service-header {
+    margin-top: 0;
+  }
 }
 @media all and (max-width: 1199px) {
   .prices {
@@ -110,13 +115,11 @@
   .prices {
     &__title {
       padding-top: 20px;
-      font-size: 70px;
-      line-height: 70px
     }
     &__subtitle {
       font-size: 23px;
       line-height: 24px;
-      margin: -47px auto 0 auto;
+      margin: -42px auto 0 auto;
     }
   }
 }
@@ -124,13 +127,11 @@
   .prices {
     &__title {
       padding-top: 20px;
-      font-size: 40px;
-      line-height: 40px
     }
     &__subtitle {
       font-size: 20px;
       line-height: 20px;
-      margin: -33px auto 0 auto;
+      margin: -29px auto 0 auto;
     }
   }
 }

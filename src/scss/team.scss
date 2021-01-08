@@ -19,7 +19,7 @@
     color: $small-text-color;
     font-size: 11px;
     line-height: 27px;
-    font-family: 'Overpass Mono';
+    font-family: 'Overpass Mono', sans-serif;
     margin-top: 96px;
     text-align: center;
     &-sign {
@@ -53,7 +53,7 @@
       }
       &-name {
         color: $text-color;
-        font-family: 'Teko';
+        font-family: 'Teko', sans-serif;
         font-size: 28px;
         line-height: 34px;
         letter-spacing: 1.7px;
@@ -63,18 +63,54 @@
       &-position {
         background-color: #D73719;
         height: 24px;
-        width: 130px;
+        width: 120px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 12px auto 0 auto;
-        font-family: 'Overpass Mono';
+        font-family: 'Overpass Mono', sans-serif;
         font-size: 13px;
         line-height: 15px;
         letter-spacing: 1.2px;
         color: #fff;
         text-transform: uppercase;
       }
+    }
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .team {
+    &__list {
+      &-item {
+        &-name {
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .team {
+    &__list {
+      &-item  {
+        margin: 0 auto 30px auto;
+      }
+    }
+    &__subtitle {
+      margin: -40px auto 0 auto;
+    }
+  }
+}
+@media all and (max-width: 575px) {
+  .team {
+    &__list {
+      &-item  {
+        margin: 0 auto 30px auto;
+      }
+    }
+    &__subtitle {
+      margin: 10px auto 0 auto;
     }
   }
 }

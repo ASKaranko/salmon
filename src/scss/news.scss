@@ -86,7 +86,7 @@
 @media all and (max-width: 575px) {
   .news-roll {
     &__item {
-      margin-bottom: 20px;
+      margin: 0 10px 20px 10px;
     }
   }
 }
@@ -95,13 +95,11 @@
   .news {
     &__title {
       padding-top: 20px;
-      font-size: 70px;
-      line-height: 70px
     }
     &__subtitle {
       font-size: 23px;
       line-height: 24px;
-      margin: -47px auto 0 auto;
+      margin: -42px auto 0 auto;
     }
   }
 }
@@ -109,13 +107,11 @@
   .news {
     &__title {
       padding-top: 20px;
-      font-size: 40px;
-      line-height: 40px
     }
     &__subtitle {
       font-size: 20px;
       line-height: 20px;
-      margin: -33px auto 0 auto;
+      margin: -29px auto 0 auto;
     }
   }
 }
