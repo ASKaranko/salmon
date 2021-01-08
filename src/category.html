@@ -15,9 +15,12 @@
             <div class="subheader">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-2 col-lg-4 col-xl-3 col-xxl-3">
+                        <div class="col-2 d-sm-none subheader__social-menu-hamburger" data-bs-toggle="modal" data-bs-target="#navigationModal">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="d-none d-sm-block col-sm-2 col-lg-4 col-xl-3 col-xxl-3">
                             <div class="subheader__social">
-                                <button class="subheader__social-menu">НАВІГАЦІЯ</button>
+                                <button class="subheader__social-menu" data-bs-toggle="modal" data-bs-target="#navigationModal">НАВІГАЦІЯ</button>
                                 <a href="#" class="d-none d-lg-flex subheader__social-icon">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
@@ -26,7 +29,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="d-none d-xl-flex col-xl-2 col-xxl-1 offset-xxl-1">
+                        <div class="d-none d-xl-flex col-xl-2 offset-xl-0 col-xxl-1 offset-xxl-1">
                             <div class="subheader__lang">
                                 <div class="dropdown btn-frame">
                                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,12 +42,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2 offset-sm-2 col-md-3 col-lg-2 offset-md-1 offset-lg-0 col-xxl-2">
+                        <div class="col-3 col-sm-2 offset-sm-2 col-md-3 col-lg-2 offset-md-1 offset-lg-0 col-xxl-2">
                             <div class="subheader__logo">
                                 <img src="assets/images/Salmon_box_logo-01.png" alt="logo" class="subheader__logo-image">
                             </div>
                         </div>
-                        <div class="col-3 offset-sm-2 offset-md-1 col-lg-4 offset-lg-2 offset-xl-0 col-xxl-5">
+                        <div class="col-6 col-sm-3 offset-sm-2 col-md-4 offset-md-1 col-lg-4 offset-lg-2 col-xl-5 offset-xl-0 col-xxl-5">
                             <div class="subheader__contacts">
                                 <div class="subheader__contacts-item">
                                     <img src="./assets/images/phone.svg" alt="phone">
@@ -65,12 +68,109 @@
                 </div>
             </div>
         </header>
+
+        <!-- Modal -->
+        <div class="modal fade" id="navigationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            &times;
+                        </button>
+                        <div class="modal__logo">
+                            <img src="assets/images/Salmon_box_logo-01.png" alt="logo" class="subheader__logo-image">
+                        </div>
+                        <nav class="modal__nav">
+                            <div class="modal__nav-item">
+                                <div class="dropdown">
+                                    <a class="modal__nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuHome" data-bs-toggle="dropdown" aria-expanded="false">
+                                        HOME
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuHome">
+                                        <li><a class="dropdown-item" href="#">HOME1</a></li>
+                                        <li><a class="dropdown-item" href="#">HOME2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal__nav-item">
+                                <div class="dropdown">
+                                    <a class="modal__nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuFeatures" data-bs-toggle="dropdown" aria-expanded="false">
+                                        FEATURES
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuFeatures">
+                                        <li><a class="dropdown-item" href="#">FEATURES1</a></li>
+                                        <li><a class="dropdown-item" href="#">FEATURES2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal__nav-item">
+                                <div class="dropdown">
+                                    <a class="modal__nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuAbout" data-bs-toggle="dropdown" aria-expanded="false">
+                                        ABOUT
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuAbout">
+                                        <li><a class="dropdown-item" href="#">ABOUT1</a></li>
+                                        <li><a class="dropdown-item" href="#">ABOUT2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal__nav-item">
+                                <div class="dropdown">
+                                    <a class="modal__nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuPage" data-bs-toggle="dropdown" aria-expanded="false">
+                                        MENU
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuPage">
+                                        <li><a class="dropdown-item" href="#">MENU1</a></li>
+                                        <li><a class="dropdown-item" href="#">MENU2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal__nav-item">
+                                <div class="dropdown">
+                                    <a class="modal__nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuCatering" data-bs-toggle="dropdown" aria-expanded="false">
+                                        CATERING
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuCatering">
+                                        <li><a class="dropdown-item" href="#">CATERING1</a></li>
+                                        <li><a class="dropdown-item" href="#">CATERING2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal__nav-item">
+                                <div class="dropdown">
+                                    <a class="modal__nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuNews" data-bs-toggle="dropdown" aria-expanded="false">
+                                        NEWS
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuNews">
+                                        <li><a class="dropdown-item" href="#">NEWS1</a></li>
+                                        <li><a class="dropdown-item" href="#">NEWS2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal__nav-item">
+                                <div class="dropdown">
+                                    <a class="modal__nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuContacts" data-bs-toggle="dropdown" aria-expanded="false">
+                                        CONTACTS
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuContacts">
+                                        <li><a class="dropdown-item" href="#">CONTACTS1</a></li>
+                                        <li><a class="dropdown-item" href="#">CONTACTS2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section>
             <div class="category-photo">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xxl-12">
-                            <img class="category-photo__styles" src="./assets/images/category.jpg" alt="salmon">
+                            <div class="col-xxl-12">
+                                <img src="./assets/images/category.jpg" class="category-photo__styles" alt="salmon">
                         </div>
                     </div>
                 </div>

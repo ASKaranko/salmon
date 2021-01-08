@@ -21,6 +21,14 @@
     font-weight: 600;
     line-height: 20px;
     color: #fff;
+    border: none;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  @media all and (max-width: 1399px) {
+    width: 130px;
+  }
 }
 
 @mixin btn-frame ($width: 116px, $height: 58px) {
@@ -45,6 +53,9 @@
   & .dropdown-menu.show {
     min-width: 118px !important;
   }
+  @media all and (max-width: 1399px) {
+    margin-left: 0;
+  }
 }
 
 @mixin logo () {
@@ -58,6 +69,9 @@
   position: relative;
   z-index: 10;
   background-color: #fff;
+  @media all and (max-width: 575px) {
+    margin-left: 20px;
+  }
 }
 
 @mixin contacts () {
@@ -104,6 +118,18 @@
     color: #000;
     margin-right: 31px;
   }
+  @media all and (max-width: 1399px) {
+    &-phonenumber {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+  @media all and (max-width: 575px) {
+    margin-left: 40px;
+  }
+  @media all and (max-width: 400px) {
+    margin-left: 10px;
+  }
 }
 
 @mixin product-item () {
@@ -114,8 +140,8 @@
   }
   margin-bottom: 24px;
   & img {
-    width: 293px;
-    min-height: 306px;
+    width: 100%;
+    max-height: 306px;
     display: block;
   }
   &__title {
@@ -152,7 +178,7 @@
   }
   &__tray {
     @include btn-frame(133px, 58px);
-    font-family: "Teko";
+    font-family: "Teko", sans-serif;
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
@@ -161,14 +187,43 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+
     &:hover {
       cursor: pointer;
+    }
+  }
+  @media all and (min-width:768px) and (max-width:1199px) {
+    &__price {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    &__tray {
+      width: 100px;
+    }
+  }
+  @media all and (min-width:768px) and (max-width: 991px) {
+    &__price {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  @media all and (min-width:768px) and (max-width: 900px) {
+    &__tray {
+      width: 90px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &__title {
+      font-size: 15px;
+      line-height: 17px;
+      letter-spacing: 0;
     }
   }
 }
 
 @mixin title() {
-  font-family: 'Stalinist One';
+  font-family: 'Stalinist One', sans-serif;
   padding-top: 50px;
   font-size: 96px;
   line-height: 96px;
@@ -200,7 +255,7 @@
 
 @mixin tray() {
   @include btn-frame(133px, 58px);
-  font-family: "Teko";
+  font-family: "Teko", sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -236,7 +291,7 @@
     & a, & span {
       font-size: 14px;
       line-height: 19px;
-      font-family: 'Overpass Mono';
+      font-family: 'Overpass Mono', sans-serif;
       color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
       cursor: pointer;

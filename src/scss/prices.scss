@@ -43,6 +43,8 @@
     &__tab.active {
       @include btn-frame(133px, 167px);
       padding-top: 27px;
+      display: block;
+      margin: 0 auto;
     }
   }
   .service-header__category {

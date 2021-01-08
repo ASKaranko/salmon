@@ -97,6 +97,14 @@ module.exports = {
 				collapseWhitespace: isProd,
 			},
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'team.html',
+			template: 'team.html',
+			minify: {
+				removeComments: isProd,
+				collapseWhitespace: isProd,
+			},
+		}),
 		new CopyPlugin({
 			patterns: [
 				{from: path.resolve(__dirname, 'src/favicon.ico'),

@@ -1,0 +1,22 @@
+@import "variables";
+@import "mixins";
+
+.carousel-indicators {
+  right: 0;
+  top: 50%;
+  left: unset;
+  bottom: unset;
+  margin-right: 0;
+  margin-left: 0;
+  flex-direction: column;
+  transform: translate(-20px, -50%);
+  & li {
+    height: 3px;
+    background-color: $primary-color;
+    &.active {
+      transition: width .5s linear;
+      height: 5px;
+      width: 40px;
+    }
+  }
+}

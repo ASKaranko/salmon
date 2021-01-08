@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Overpass+Mono&family=Teko&family=Stalinist+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Overpass+Mono&family=Teko:wght@400;500;600&family=Stalinist+One&display=swap');
 @import "~normalize.css";
 @import "~bootstrap/scss/bootstrap";
+@import '~swiper/swiper-bundle.css';
 @import "header";
 @import "photo";
 @import "prices";
@@ -10,6 +11,11 @@
 @import "footer";
 @import "product";
 @import "news-page";
+@import "modal";
+@import "carousel";
+@import "team";
+@import "awards";
+@import "video";
 @import "interfaces";
 
 * {

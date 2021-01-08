@@ -3,14 +3,15 @@
 
 .main-photo, .category-photo {
   width: 100%;
-  max-height: 575px;
+  max-height: 100%;
   margin-top: -70px;
+  position: relative;
   &__styles {
     width: 100%;
   }
 }
 .category-photo {
-  max-height: 373px;
+  max-height: 100%;
   position: relative;
 }
 .category-menu {

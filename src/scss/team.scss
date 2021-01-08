@@ -1,0 +1,80 @@
+@import "variables";
+@import "mixins";
+
+.team {
+  margin-top: 20px;
+  width: 100%;
+  &-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 140px;
+  }
+  &__title {
+    @include title;
+  }
+  &__subtitle {
+    @include subtitle;
+  }
+  &__quote {
+    color: $small-text-color;
+    font-size: 11px;
+    line-height: 27px;
+    font-family: 'Overpass Mono';
+    margin-top: 96px;
+    text-align: center;
+    &-sign {
+      margin-top: 73px;
+      width: 100%;
+      & img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__list {
+    &-wrapper {
+      width: 100%;
+      margin: 97px auto 0 auto;
+    }
+    &-item {
+      max-width: 337px;
+      margin-bottom: 30px;
+      &-image {
+        width: 100%;
+        height: 100%;
+        & img {
+          max-width: 100%;
+        }
+      }
+      &-wrapper {
+        width: 100%;
+        background-color: #fff;
+        padding: 65px 20px 65px 20px;
+      }
+      &-name {
+        color: $text-color;
+        font-family: 'Teko';
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 1.7px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      &-position {
+        background-color: #D73719;
+        height: 24px;
+        width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 12px auto 0 auto;
+        font-family: 'Overpass Mono';
+        font-size: 13px;
+        line-height: 15px;
+        letter-spacing: 1.2px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
