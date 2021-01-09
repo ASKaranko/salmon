@@ -38,7 +38,7 @@
   }
   &__description {
     & span:nth-of-type(1), & span:nth-of-type(2), & span:nth-of-type(3) {
-     font-family: 'Teko';
+     font-family: 'Teko', sans-serif;
      font-size: 67px;
      line-height: 70px;
      letter-spacing: 1.3px;
@@ -53,12 +53,13 @@
       height: 81px;
       border: 5px solid #fff;
       margin-top: 73px;
+      margin-bottom: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       color: $text-color;
       font-size: 18px;
-      font-family: 'Teko';
+      font-family: 'Teko', sans-serif;
       line-height: 22px;
       font-weight: 400;
       letter-spacing: 1.5px;
@@ -93,6 +94,18 @@
       & span:nth-of-type(1), & span:nth-of-type(2), & span:nth-of-type(3) {
         font-size: 5vw;
         line-height: 5vw;
+      }
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .video-sample {
+    &__column {
+      padding-bottom: 20px;
+    }
+    &__description {
+      &-button {
+        margin-top: 30px;
       }
     }
   }

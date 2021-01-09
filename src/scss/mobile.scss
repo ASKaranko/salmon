@@ -64,6 +64,7 @@
     &__description {
       padding-left: 20px;
       padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 }
@@ -100,5 +101,12 @@
         letter-spacing: 1.5px;
       }
     }
+  }
+}
+@media all and (max-width: 991px) {
+  .mobile-app {
+      &-button {
+        margin-top: 30px;
+      }
   }
 }

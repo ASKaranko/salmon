@@ -30,72 +30,75 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  &__nav {
+  .accordion {
     position: absolute;
     top: 270px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    &-item {
+    width: 30vw;
+    z-index: 1;
+    height: auto;
+    &-button {
+      color: #fff;
       background-color: #000;
-      width: 20vw;
-      height: 50px;
-      & .dropdown-menu.show {
-        background-color: #000;
-        transform: translate(20vw, -50%) !important;
-        & li a {
-          color: #fff;
-          &:hover {
-            background-color: #000;
-            color: $primary-color;
-          }
-        }
-      }
-    }
-    &-link {
-      font-family: "Teko";
+      font-family: "Montserrat", sans-serif;
       font-size: 20px;
       line-height: 24px;
       letter-spacing: 1.5px;
-      color: #fff;
-      display: block;
-      margin-right: 24px;
-      text-decoration: none;
-      &.dropdown-toggle:after {
-        margin-left: 0;
-        position: absolute;
-        right: 0;
-        border-top: 0.3em solid transparent;
-        border-right: 0.3em solid transparent;
-        border-bottom: 0.3em solid transparent;
-        border-left: 0.3em solid;
-      }
+      font-weight: 600;
+      padding: 0;
+      border: 0;
+      outline: 0;
       &:hover {
         color: $primary-color;
       }
-      &.active {
-        color: $primary-color;
+      &:focus {
+        box-shadow: none;
       }
-      &:last-of-type {
-        margin-right: 0;
+      &:after {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, .1);
+        background-size: 100% 100%;
       }
+    }
+    &-item {
+      &__links {
+        background-color: #000;
+        list-style-type: none;
+      }
+      &__sublink {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 1.5px;
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .modal {
+    .accordion {
+      top: 270px;
+      left: 30%;
+      width: 50vw;
+      transform: translateX(0%);
     }
   }
 }
 @media all and (max-width: 575px) {
   .modal {
-    &__nav {
-      left: 30%;
-      &-item {
-        width: 40vw;
-        & .dropdown-menu.show {
-          background-color: #000;
-          transform: translate(40vw, -10%) !important;
-        }
-      }
+    .accordion {
+      top: 270px;
+      left: 10%;
+      width: 80vw;
+      transform: translateX(0%);
     }
   }
 }
