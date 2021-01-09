@@ -3,6 +3,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
@@ -117,6 +118,25 @@ module.exports = {
 		}),
 		new MiniCssExtractPlugin({
 			filename: filename('css'),
+		}),
+		new ImageMinimizerPlugin({
+			minimizerOptions: {
+				plugins: [
+					['gifsicle', {interlaced: true}],
+					['mozjpeg', {quality: 90}],
+					['optipng', {optimizationLevel: 5}],
+					[
+						'svgo',
+						{
+							plugins: [
+								{
+									removeViewBox: false,
+								},
+							],
+						},
+					],
+				],
+			},
 		}),
 	],
 	module: {
