@@ -262,6 +262,7 @@
     }
   }
   @media all and (max-width: 575px) {
+    margin-bottom: 10px;
     width: 90%;
     margin-left: 20px;
   }
@@ -332,7 +333,7 @@
 
 @mixin tray() {
   @include btn-frame(133px, 58px);
-  font-family: "Teko", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -384,6 +385,14 @@
     top: 30%;
   }
   @media all and (max-width: 575px) {
-    display: none;
+    top: 20%;
+    &__title {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    & a, & span {
+      font-size: 12px;
+      line-height: 12px;
+    }
   }
 }

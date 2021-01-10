@@ -94,6 +94,9 @@
 }
 @media all and (max-width: 575px) {
   .modal {
+    &__logo {
+      margin-left: 0;
+    }
     .accordion {
       top: 270px;
       left: 10%;

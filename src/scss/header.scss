@@ -13,7 +13,7 @@
       @include menu-button;
       margin-right: 32px;
       &-hamburger {
-        margin-top: 20px;
+        margin-top: 10px;
         background-color: $primary-color;
         width: 50px;
         height: 50px;
@@ -71,16 +71,17 @@
   .subheader {
     &__contacts, &__lang {
       padding-bottom: 0;
-      margin-top: 20px;
+      margin-top: 10px;
     }
   }
 }
 @media all and (max-width: 400px) {
   .subheader {
+    padding-top: 10px;
     &__logo {
       width: 60px;
       height: 60px;
-      margin-top: 20px;
+      margin-top: 10px;
       & img {
         max-width: 60px;
       }
