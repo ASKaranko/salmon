@@ -131,7 +131,21 @@
     &__subtitle {
       font-size: 20px;
       line-height: 20px;
-      margin: -29px auto 0 auto;
+      margin: 10px auto 0 auto;
+    }
+    .service-header, .service-header__category {
+      &__tab {
+        cursor: pointer;
+        width: 90px;
+        padding: 30px 5px 10px 5px;
+      }
+      &__tab.active {
+        @include btn-frame(90px, 130px);
+      }
+      &__tab span {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
 }

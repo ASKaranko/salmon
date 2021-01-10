@@ -123,7 +123,7 @@ module.exports = {
 			minimizerOptions: {
 				plugins: [
 					['gifsicle', {interlaced: true}],
-					['mozjpeg', {quality: 90}],
+					['mozjpeg', {quality: 100}],
 					['optipng', {optimizationLevel: 5}],
 					[
 						'svgo',

@@ -69,7 +69,7 @@
 }
 @media all and (max-width: 575px) {
   .subheader {
-    &__contacts {
+    &__contacts, &__lang {
       padding-bottom: 0;
       margin-top: 20px;
     }
