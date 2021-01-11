@@ -43,6 +43,8 @@
 }
 @media all and (min-width: 1400px) {
   .subheader {
+    &__contacts {
+    }
     &__logo {
       margin: -22px auto 0 auto;
     }

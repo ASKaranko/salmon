@@ -153,6 +153,41 @@
     color: #000;
     margin-right: 31px;
   }
+  @media all and (min-width: 1901px) {
+    &-item {
+      &:nth-of-type(2) {
+        margin-left: 200px;
+      }
+    }
+  }
+  @media all and (min-width: 1800px) and (max-width: 1900px) {
+    &-item {
+      &:nth-of-type(2) {
+        margin-left: 170px;
+      }
+    }
+  }
+  @media all and (min-width: 1600px) and (max-width: 1799px) {
+    &-item {
+      &:nth-of-type(2) {
+        margin-left: 100px;
+      }
+    }
+  }
+  @media all and (min-width: 1500px) and (max-width: 1600px) {
+    &-item {
+      &:nth-of-type(2) {
+        margin-left: 50px;
+      }
+    }
+  }
+  @media all and (min-width: 1400px) and (max-width: 1499px) {
+    &-item {
+      &:nth-of-type(2) {
+        margin-left: 10px;
+      }
+    }
+  }
   @media all and (max-width: 1399px) {
     &-phonenumber {
       font-size: 18px;
