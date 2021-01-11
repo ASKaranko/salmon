@@ -32,6 +32,9 @@
   }
 }
 @media all and (min-width: 576px) and (max-width: 991px) {
+  .main-photo {
+    max-height: 373px;
+  }
   .category-photo {
     & img {
       height: 180px;

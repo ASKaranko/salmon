@@ -56,7 +56,7 @@
 }
 @media all and (max-width: 767px) {
   .subheader {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     background-color: #fff;
