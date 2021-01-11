@@ -139,11 +139,11 @@
     .service-header, .service-header__category {
       &__tab {
         cursor: pointer;
-        width: 90px;
-        padding: 30px 5px 10px 5px;
+        width: 80px;
+        padding: 20px 5px 20px 5px;
       }
       &__tab.active {
-        @include btn-frame(90px, 130px);
+        @include btn-frame(80px, 130px);
       }
       &__tab span {
         font-size: 14px;

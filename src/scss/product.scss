@@ -51,6 +51,21 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 38px;
+    & input::-webkit-inner-spin-button {
+      opacity: 1;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0.3em;
+      width: 30px;
+      height: 50px;
+      //line-height: 1.95em;
+      text-align: center;
+      cursor: pointer;
+    }
+    & input {
+      position: relative;
+    }
   }
   &__tray {
     @include tray;

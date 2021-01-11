@@ -11,6 +11,11 @@
   font-size: 25px;
   color: #fff;
   text-decoration: none;
+  &:hover {
+    color: $primary-color;
+    background-color: #fff;
+    border: 2px solid $primary-color;
+  }
 }
 
 @mixin menu-button () {
@@ -54,7 +59,10 @@
     min-width: 118px !important;
   }
   @media all and (max-width: 1399px) {
-    margin-left: 0;
+    & .dropdown {
+      margin-left: auto;
+      margin-right: 0;
+    }
   }
   @media all and (max-width: 575px) {
     & .btn-frame {
@@ -64,7 +72,7 @@
       min-width: 63px !important;
     }
   }
-  @media all and (max-width: 400px) {
+  @media all and (max-width: 500px) {
     & .btn-frame {
       @include btn-frame(58px, 50px);
     }
@@ -160,8 +168,7 @@
   margin-bottom: 24px;
   & img {
     width: 100%;
-    max-width: 293px;
-    max-height: 306px;
+    height: 100%;
     display: block;
     margin: 0 auto;
   }
@@ -211,6 +218,8 @@
 
     &:hover {
       cursor: pointer;
+      color: #fff;
+      background-color: $primary-color;
     }
   }
   @media all and (min-width:1200px) and (max-width:1300px) {
@@ -263,8 +272,10 @@
   }
   @media all and (max-width: 575px) {
     margin-bottom: 10px;
-    width: 90%;
-    margin-left: 20px;
+    width: 100%;
+    &__wrapper {
+      margin-top: 40px;
+    }
   }
   @media all and (max-width: 400px) {
     &__price {
@@ -385,7 +396,7 @@
     top: 30%;
   }
   @media all and (max-width: 575px) {
-    top: 20%;
+    top: 30%;
     &__title {
       font-size: 20px;
       line-height: 20px;

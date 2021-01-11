@@ -17,9 +17,43 @@
 .category-menu {
   @include photo-menu;
 }
+@media all and (min-width: 1200px) {
+  .category-photo {
+    & img {
+      min-height: 373px;
+    }
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1200px) {
+  .category-photo {
+    & img {
+      height: 225px;
+    }
+  }
+}
+@media all and (min-width: 576px) and (max-width: 991px) {
+  .category-photo {
+    & img {
+      height: 180px;
+      object-fit: cover;
+    }
+  }
+}
+@media all and (max-width: 575px) {
+  .category-photo {
+    & img {
+      height: 156px;
+      object-fit: cover;
+    }
+  }
+}
 @media all and (max-width: 767px) {
   .main-photo, .category-photo {
     margin-top: 20px;
-    max-height: 320px;
+  }
+}
+@media all and (max-width: 575px) {
+  .main-photo, .category-photo {
+    margin-top: 20px;
   }
 }

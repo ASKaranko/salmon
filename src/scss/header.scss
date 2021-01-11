@@ -41,19 +41,51 @@
     padding-bottom: 30px;
   }
 }
-
-@media all and (max-width: 767px) {
+@media all and (min-width: 1400px) {
   .subheader {
     &__logo {
-      width: 90px;
-      height: 90px;
+      margin: -22px auto 0 auto;
+    }
+    &__social, &__lang, &__contacts {
+      padding-bottom: 0 !important;
+    }
+    &__lang {
+      margin-left: 0;
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .subheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 17;
+    width: 100%;
+    &__social {
+      &-menu {
+        &-hamburger {
+          margin-top: 30px;
+        }
+      }
+    }
+    padding-top: 0;
+    &__lang {
+      margin-top: 30px;
+    }
+    &__logo {
+      width: 130px;
+      height: 130px;
+      margin-left: 35px;
       margin-top: 0;
-      border: 2px solid $primary-color;
+      margin-right: auto;
+      border: none;
       & img {
-        max-width: 90px;
+        max-width: 130px;
       }
     }
     &__contacts {
+      margin-top: 30px;
       &-item {
         &:nth-of-type(1) {
           margin-left: 0;
@@ -71,20 +103,41 @@
   .subheader {
     &__contacts, &__lang {
       padding-bottom: 0;
-      margin-top: 10px;
+      margin-top: 30px;
+    }
+    &__logo {
+      margin-left: 20px;
+    }
+  }
+}
+@media all and (max-width: 500px) {
+  .subheader {
+    &__contacts {
+      //margin: 30px auto 0 auto;
+    }
+    &__logo {
+      width: 100px;
+      height: 100px;
+      & img {
+        max-width: 100px;
+      }
+    }
+    &__lang {
+      margin-left: 2px;
+    }
+  }
+}
+@media all and (min-width: 400px) and (max-width: 500px) {
+  .subheader {
+    &__logo {
+      margin-left: 20px;
     }
   }
 }
 @media all and (max-width: 400px) {
   .subheader {
-    padding-top: 10px;
     &__logo {
-      width: 60px;
-      height: 60px;
-      margin-top: 10px;
-      & img {
-        max-width: 60px;
-      }
+      margin-left: 0;
     }
   }
 }
