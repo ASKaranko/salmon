@@ -58,6 +58,14 @@
   & .dropdown-menu.show {
     min-width: 118px !important;
   }
+
+
+  @media all and (min-width: 1600px) {
+    & .dropdown {
+      margin-left: 50px;
+      margin-right: 0;
+    }
+  }
   @media all and (max-width: 1399px) {
     & .dropdown {
       margin-left: auto;
